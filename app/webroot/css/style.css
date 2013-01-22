@@ -1,0 +1,64 @@
+#container {
+	-webkit-transform-style: preserve-3d;
+	-webkit-perspective: 2000px;
+}
+#content {
+	position: relative;
+	
+	-webkit-origin-style: preserve-3d;
+	-webkit-perspective: 2000px;
+	
+	transform: rotateY(0deg);
+	-o-transform: rotateY(0deg);
+	-moz-transform: rotateY(0deg);
+	-webkit-transform: rotateY(0deg);
+}
+#content #front,
+#content #back {
+	
+	backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	
+	transition: transform 0.5s;
+	-o-transition: -o-transform 0.5s;
+	-moz-transition: -moz-transform 0.5s;
+	-webkit-transition: -webkit-transform 0.5s;
+	
+}
+#content #front {
+	transform: rotateY(0deg);
+	-o-transform: rotateY(0deg);
+	-moz-transform: rotateY(0deg);
+	-webkit-transform: rotateY(0deg);
+}
+#content #back {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: scroll;
+	
+	transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+}
+
+.back #content #front {
+	transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+}
+.back #content #back {
+	transform: rotateY(360deg);
+	-o-transform: rotateY(360deg);
+	-moz-transform: rotateY(360deg);
+	-webkit-transform: rotateY(360deg);
+}
+#contacts li {
+	cursor: pointer;
+}
